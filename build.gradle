@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+}
+
+
+android {
+    namespace 'com.freelandsite.freelandsitetestservice'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.freelandsite.freelandsitetestservice"
+        minSdk 25
+        targetSdk 34
+        versionCode 29
+        versionName "29"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:31.2.2')
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.android.gms:play-services-maps:18.2.0'
+    implementation 'androidx.activity:activity:1.8.0'
+    implementation 'com.google.android.gms:play-services-wallet:19.4.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.squareup.okhttp:okhttp:2.7.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.google.mlkit:barcode-scanning:17.2.0'
+    implementation 'com.journeyapps:zxing-android-embedded:4.1.0'
+
+
+    def work_version = "2.7.1"
+
+    // (Java only)
+    implementation "androidx.work:work-runtime:$work_version"
+
+    // Kotlin + coroutines
+    implementation "androidx.work:work-runtime-ktx:$work_version"
+
+    // optional - RxJava2 support
+    implementation "androidx.work:work-rxjava2:$work_version"
+
+    // optional - GCMNetworkManager support
+    implementation "androidx.work:work-gcm:$work_version"
+
+    // optional - Test helpers
+    androidTestImplementation "androidx.work:work-testing:$work_version"
+
+    // optional - Multiprocess support
+    implementation "androidx.work:work-multiprocess:$work_version"
+
+    implementation 'com.google.firebase:firebase-bom:32.8.0'
+
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'androidx.core:core-ktx:1.6.0'
+
+
+
+
+    implementation 'io.github.tashilapathum:please-wait:0.4.0'
+    implementation 'com.github.salehyarahmadi:DataTable:v1.0.1'
+    implementation 'es.voghdev.pdfviewpager:library:1.1.2'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+}
+
+
